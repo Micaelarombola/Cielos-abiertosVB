@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cielos Abiertos VB — Colección Primavera</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- PORTADA INICIAL -->
+  <section class="intro-cover" id="inicio">
+    <div class="intro-bg">
+      <span class="blob blob-1"></span>
+      <span class="blob blob-2"></span>
+      <span class="blob blob-3"></span>
+      <span class="spark spark-1"></span>
+      <span class="spark spark-2"></span>
+      <span class="spark spark-3"></span>
+    </div>
+
+    <div class="intro-content">
+      <div class="intro-logo-wrap">
+        <img src="Fotos/Logo.png" alt="Logo Cielos Abiertos" class="intro-logo">
+      </div>
+
+      <p class="intro-kicker">Nueva temporada ✨</p>
+      <h1>Cielos Abiertos VB</h1>
+      <p class="intro-text">
+        Moda femenina cómoda, fresca y canchera para esta primavera.
+      </p>
+
+      <a href="#tienda" class="intro-btn">Ingresar a la tienda</a>
+      <div class="intro-arrow">⌄</div>
+    </div>
+  </section>
+
+  <!-- Barra anuncio -->
+  <div class="announcement">
+    <div class="announcement-track">
+      <span class="announcement-text">
+        🌸 Colección Primavera 2026 | Pedí por WhatsApp | Envíos a todo el país | Tarjeta Cielos Abiertos VIP 💳
+      </span>
+      <span class="announcement-text">
+        🌸 Colección Primavera 2026 | Pedí por WhatsApp | Envíos a todo el país | Tarjeta Cielos Abiertos VIP 💳
+      </span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <nav class="nav">
+      <div class="brand">
+        <img src="Fotos/Logo.png" alt="Logo Cielos Abiertos" class="logo" />
+        <span class="brand-name">Cielos Abiertos <b>VB</b></span>
+      </div>
+
+      <button class="cart-btn" id="openCart">🛍️ <span>Carrito</span> (<span id="cartCount">0</span>)</button>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#tienda">Tienda</a>
+      <a href="#promos">Promos</a>
+      <a href="#categorias">Categorías</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+  </header>
+
+  <!-- DESTACADOS -->
+  <section class="destacados">
+    <!-- Tarjeta 1 -->
+    <div class="tarjeta-coleccion">
+      <div class="coleccion-texto">
+        <p class="subtitulo">Colección Primavera 2026 🌸</p>
+        <h1>Prendas cómodas, frescas y cancheras para la nueva temporada</h1>
+        <p class="descripcion">
+          Descubrí prendas ideales para primavera y cargadas directamente desde el panel de administración.
+          Comprá por WhatsApp de forma simple y rápida.
+        </p>
+        <a href="#tienda" class="btn">Ver tienda</a>
+      </div>
+
+      <div class="coleccion-media">
+        <div class="carrusel" id="heroSlider">
+          <img src="Fotos/coleccion-1.jpg" alt="Colección primavera look 1" class="active">
+          <img src="Fotos/coleccion-2.jpg" alt="Colección primavera look 2">
+          <img src="Fotos/coleccion-3.jpg" alt="Colección primavera look 3">
+        </div>
+        <div class="dots" id="heroDots"></div>
+      </div>
+    </div>
+
+    <!-- Tarjeta 2 -->
+    <div class="tarjeta-beneficios" id="promos">
+      <div class="beneficios-texto">
+        <h2>Sumá beneficios con tu Tarjeta Cielos Abiertos VIP <span class="emoji">🌈</span></h2>
+        <ul>
+          <li>3° compra → <b>10% OFF</b></li>
+          <li>6° compra → <b>20% OFF</b></li>
+          <li>9° compra → <b>30% OFF</b> + acceso a promos exclusivas</li>
+        </ul>
+        <a href="#contacto" class="btn-outline">Quiero mi tarjeta</a>
+      </div>
+
+      <div class="beneficios-video">
+        <video autoplay muted loop playsinline>
+          <source src="Fotos/tarjetas-video.mp4" type="video/mp4">
+          Tu navegador no soporta videos.
+        </video>
+        <small class="video-caption">Tarjeta Cielos Abiertos VIP</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categorías -->
+  <section class="section" id="categorias">
+    <h2>Categorías</h2>
+    <div class="cat-simple">
+      <button class="cat-btn active" data-cat="todos">Todos</button>
+      <button class="cat-btn" data-cat="buzos">Buzos</button>
+      <button class="cat-btn" data-cat="remeras">Remeras</button>
+      <button class="cat-btn" data-cat="conjuntos">Conjuntos</button>
+      <button class="cat-btn" data-cat="deportivos">Deportivos</button>
+      <button class="cat-btn" data-cat="pantalones">Pantalones</button>
+      <button class="cat-btn" data-cat="calzado">Calzado</button>
+    </div>
+  </section>
+
+  <!-- Tienda principal -->
+  <section class="section" id="tienda">
+    <h2>Tienda</h2>
+    <div class="grid products" id="productGrid"></div>
+  </section>
+
+  <!-- NOSOTROS / CONTACTO -->
+  <section class="section cols" id="nosotros">
+    <div class="about">
+      <h2>Nosotros</h2>
+      <p>
+        En <b>Cielos Abiertos VB</b> creemos en una moda cómoda, fresca y auténtica.
+        Nuestra colección primavera está pensada para acompañarte todos los días con prendas livianas,
+        versátiles y llenas de estilo.
+      </p>
+    </div>
+
+    <div class="about" id="contacto">
+      <h2>Contacto</h2>
+      <p>
+        📍 Dirección del local<br>
+        📞 WhatsApp: 11 2728-3586<br>
+        📧 ventas@cielosabiertosvb.com.ar<br>
+        📸 Instagram: @cielosabiertosvb
+      </p>
+      <p class="muted">
+        Medios de pago: Transferencia, Efectivo, Ualá, Cuenta DNI. Tarjeta: 1 cuota +10% · 3 cuotas +30%.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="foot">
+      <div>
+        <div class="brand brand-footer">Cielos Abiertos VB</div>
+        <small>© <span id="year"></span> Cielos Abiertos VB — Todos los derechos reservados.</small>
+      </div>
+      <div>
+        <small><b>Cambios y devoluciones</b><br>Los cambios se realizan dentro de los 10 días con etiqueta y ticket. No
+          se realizan devoluciones en efectivo.</small>
+      </div>
+      <div>
+        <small><b>Envíos</b><br>Envíos a todo el país 📦 o retiro sin cargo por el local.</small>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Drawer Carrito -->
+  <div class="drawer" id="drawer">
+    <div class="overlay" id="closeCart"></div>
+
+    <div class="panel">
+      <header class="panel-head">
+        <div class="panel-title">Tu carrito</div>
+        <button class="cart-btn secondary" id="closeX">Cerrar ✕</button>
+      </header>
+
+      <div class="content">
+        <div id="cartItems"></div>
+        <hr>
+        <div class="row"><span>Subtotal</span><b>$ <span id="subtot">0</span></b></div>
+        <div class="row"><span class="muted">Recargo</span><b>$ <span id="recargo">0</span></b></div>
+        <div class="row total-row"><span>Total</span><b>$ <span id="total">0</span></b></div>
+      </div>
+
+      <div class="footer-drawer">
+        <a class="btn" id="checkout" href="#">Enviar pedido por WhatsApp</a>
+        <small class="muted">Tu pedido se enviará por WhatsApp para coordinar la compra.</small>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin - Cielos Abiertos VB</title>
+  <style>
+    body{
+      font-family: Arial, sans-serif;
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #fafbff;
+      color: #2c2c2c;
+    }
+
+    h1,h2{
+      margin-bottom: 16px;
+    }
+
+    form{
+      display:grid;
+      gap:12px;
+      background:#fff;
+      border-radius:16px;
+      padding:20px;
+      box-shadow:0 4px 16px rgba(0,0,0,.08);
+      margin-bottom:30px;
+    }
+
+    input, textarea, button, select{
+      padding:12px;
+      font-size:16px;
+      border:1px solid #ddd;
+      border-radius:10px;
+    }
+
+    button{
+      background:#8AAAE5;
+      color:#fff;
+      border:none;
+      font-weight:700;
+      cursor:pointer;
+    }
+
+    button:hover{
+      opacity:.95;
+    }
+
+    .producto-admin{
+      background:#fff;
+      border-radius:14px;
+      padding:16px;
+      margin-bottom:14px;
+      box-shadow:0 4px 12px rgba(0,0,0,.06);
+    }
+
+    .producto-admin img{
+      width:120px;
+      height:120px;
+      object-fit:cover;
+      border-radius:10px;
+      margin-bottom:10px;
+    }
+
+    .acciones{
+      display:flex;
+      gap:10px;
+      margin-top:12px;
+      flex-wrap:wrap;
+    }
+
+    .acciones button{
+      width:auto;
+      padding:10px 14px;
+    }
+
+    .btn-eliminar{
+      background:#e35d5d;
+    }
+
+    .btn-editar{
+      background:#7a8ed6;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Panel administrador</h1>
+
+  <form id="productoForm">
+    <input type="hidden" id="productoId">
+
+    <input type="text" id="nombre" placeholder="Nombre del producto" required>
+    <input type="number" id="precio" placeholder="Precio" required>
+    <textarea id="descripcion" placeholder="Descripción"></textarea>
+
+    <select id="categoria">
+      <option value="">Seleccionar categoría</option>
+      <option value="buzos">Buzos</option>
+      <option value="remeras">Remeras</option>
+      <option value="conjuntos">Conjuntos</option>
+      <option value="deportivos">Deportivos</option>
+      <option value="pantalones">Pantalones</option>
+      <option value="calzado">Calzado</option>
+    </select>
+
+    <input type="text" id="talles" placeholder="Talles ej: S, M, L">
+    <input type="text" id="colores" placeholder="Colores ej: Blanco, Rosa, Negro">
+    <input type="number" id="stock" placeholder="Stock">
+    <input type="file" id="imagen" accept="image/*">
+
+<button type="submit" id="submitBtn">Guardar producto</button>  </form>
+
+  <h2>Productos cargados</h2>
+  <div id="listaProductos"></div>
+
+  <script src="admin.js"></script>
+</body>
+</html>
