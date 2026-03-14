@@ -6,8 +6,7 @@ const $$ = (s, ctx = document) => Array.from(ctx.querySelectorAll(s));
    CONFIG
 ================================ */
 const WHATSAPP_NUMBER = "5491127283586";
-const API_URL = "http://localhost:3000/api/productos";
-
+const API_URL = "https://cielos-abiertos-vb-api.onrender.com/api/productos";
 let productosBackend = [];
 let categoriaActual = "todos";
 
