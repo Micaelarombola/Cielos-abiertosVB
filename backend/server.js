@@ -113,17 +113,18 @@ app.post("/api/productos", upload.single("imagen"), (req, res) => {
   try {
     const productos = leerProductos();
 
-    const nuevoProducto = {
-      id: Date.now(),
-      nombre: req.body.nombre?.trim() || "",
-      precio: Number(req.body.precio) || 0,
-      descripcion: req.body.descripcion?.trim() || "",
-      categoria: req.body.categoria?.trim().toLowerCase() || "",
-      talles: req.body.talles?.trim() || "",
-      colores: req.body.colores?.trim() || "",
-      stock: Number(req.body.stock) || 0,
-      imagen: req.file ? `/uploads/${req.file.filename}` : ""
-    };
+const nuevoProducto = {
+  id: Date.now(),
+  nombre: req.body.nombre?.trim() || "",
+  precio: Number(req.body.precio) || 0,
+  descripcion: req.body.descripcion?.trim() || "",
+  categoria: req.body.categoria?.trim().toLowerCase() || "",
+  subcategoria: req.body.subcategoria?.trim() || "",
+  talles: req.body.talles?.trim() || "",
+  colores: req.body.colores?.trim() || "",
+  stock: Number(req.body.stock) || 0,
+  imagen: req.file ? `/uploads/${req.file.filename}` : ""
+};
 
     productos.push(nuevoProducto);
     guardarProductos(productos);
