@@ -162,6 +162,7 @@ app.put("/api/productos/:id", upload.single("imagen"), (req, res) => {
       precio: req.body.precio !== undefined ? Number(req.body.precio) : actual.precio,
       descripcion: req.body.descripcion !== undefined ? req.body.descripcion.trim() : actual.descripcion,
       categoria: req.body.categoria !== undefined ? req.body.categoria.trim().toLowerCase() : actual.categoria,
+      subcategoria: req.body.subcategoria !== undefined ? req.body.subcategoria.trim() : actual.subcategoria,
       talles: req.body.talles !== undefined ? req.body.talles.trim() : actual.talles,
       colores: req.body.colores !== undefined ? req.body.colores.trim() : actual.colores,
       stock: req.body.stock !== undefined ? Number(req.body.stock) : actual.stock,
